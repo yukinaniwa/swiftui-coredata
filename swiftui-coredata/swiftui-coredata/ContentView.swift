@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import WidgetKit
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -64,6 +65,7 @@ struct ContentView: View {
         
         // 保存する
         try? viewContext.save()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

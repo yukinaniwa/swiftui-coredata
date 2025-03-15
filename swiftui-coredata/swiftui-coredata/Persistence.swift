@@ -35,7 +35,20 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
+        
+        // - START: App Group
+        let appGroupId = "group.com.winwinwin.app.groups"
+        guard let containerUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupId) else {
+            fatalError("Failure to init store URL for AppGroup ID: \(appGroupId)")
+        }
+        let storeUrl = containerUrl.appendingPathComponent("CoreDataWidgetFirst")
+
+        let description = NSPersistentStoreDescription(url: storeUrl)
+
         container = NSPersistentContainer(name: "swiftui_coredata")
+        container.persistentStoreDescriptions = [description]
+        // - END:   App Group
+        
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

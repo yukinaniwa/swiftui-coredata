@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct AddMemoView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -44,6 +45,7 @@ struct AddMemoView: View {
         
         // 生成したインスタンスをCoreDataに保存する
         try? viewContext.save()
+        WidgetCenter.shared.reloadAllTimelines()
     
         presentation.wrappedValue.dismiss()
     }

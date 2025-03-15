@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5C78F1092D8552450099049A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C78F1082D8552440099049A /* WidgetKit.framework */; };
+		5C78F10B2D8552450099049A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C78F10A2D8552450099049A /* SwiftUI.framework */; };
+		5C78F11C2D85524A0099049A /* swiftui-coredata-widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5C78F1062D8552440099049A /* swiftui-coredata-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5C78F0D62D82A4610099049A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,65 @@
 			remoteGlobalIDString = 5C78F0BF2D82A45F0099049A;
 			remoteInfo = "swiftui-coredata";
 		};
+		5C78F11A2D85524A0099049A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C78F0B82D82A45F0099049A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C78F1052D8552440099049A;
+			remoteInfo = "swiftui-coredata-widgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C78F1212D85524A0099049A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5C78F11C2D85524A0099049A /* swiftui-coredata-widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5C78F0C02D82A45F0099049A /* swiftui-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C78F0D52D82A4610099049A /* swiftui-coredataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-coredataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C78F0DF2D82A4610099049A /* swiftui-coredataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swiftui-coredataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C78F1062D8552440099049A /* swiftui-coredata-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "swiftui-coredata-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C78F1082D8552440099049A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5C78F10A2D8552450099049A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5C78F1222D8552B60099049A /* swiftui-coredata-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "swiftui-coredata-widgetExtension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5C78F11D2D85524A0099049A /* Exceptions for "swiftui-coredata-widget" folder in "swiftui-coredata-widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5C78F1052D8552440099049A /* swiftui-coredata-widgetExtension */;
+		};
+		5C78F1252D855B510099049A /* Exceptions for "swiftui-coredata" folder in "swiftui-coredata-widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Model/Entity/Memo+CoreDataClass.swift",
+				"Model/Entity/Memo+CoreDataProperties.swift",
+				Persistence.swift,
+				swiftui_coredata.xcdatamodeld,
+			);
+			target = 5C78F1052D8552440099049A /* swiftui-coredata-widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5C78F0C22D82A45F0099049A /* swiftui-coredata */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5C78F1252D855B510099049A /* Exceptions for "swiftui-coredata" folder in "swiftui-coredata-widgetExtension" target */,
+			);
 			path = "swiftui-coredata";
 			sourceTree = "<group>";
 		};
@@ -43,6 +97,14 @@
 		5C78F0E22D82A4610099049A /* swiftui-coredataUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "swiftui-coredataUITests";
+			sourceTree = "<group>";
+		};
+		5C78F10C2D8552450099049A /* swiftui-coredata-widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5C78F11D2D85524A0099049A /* Exceptions for "swiftui-coredata-widget" folder in "swiftui-coredata-widgetExtension" target */,
+			);
+			path = "swiftui-coredata-widget";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +131,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C78F1032D8552440099049A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C78F10B2D8552450099049A /* SwiftUI.framework in Frameworks */,
+				5C78F1092D8552450099049A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5C78F0B72D82A45F0099049A = {
 			isa = PBXGroup;
 			children = (
+				5C78F1222D8552B60099049A /* swiftui-coredata-widgetExtension.entitlements */,
 				5C78F0C22D82A45F0099049A /* swiftui-coredata */,
 				5C78F0D82D82A4610099049A /* swiftui-coredataTests */,
 				5C78F0E22D82A4610099049A /* swiftui-coredataUITests */,
+				5C78F10C2D8552450099049A /* swiftui-coredata-widget */,
+				5C78F1072D8552440099049A /* Frameworks */,
 				5C78F0C12D82A45F0099049A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +162,18 @@
 				5C78F0C02D82A45F0099049A /* swiftui-coredata.app */,
 				5C78F0D52D82A4610099049A /* swiftui-coredataTests.xctest */,
 				5C78F0DF2D82A4610099049A /* swiftui-coredataUITests.xctest */,
+				5C78F1062D8552440099049A /* swiftui-coredata-widgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5C78F1072D8552440099049A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C78F1082D8552440099049A /* WidgetKit.framework */,
+				5C78F10A2D8552450099049A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +186,12 @@
 				5C78F0BC2D82A45F0099049A /* Sources */,
 				5C78F0BD2D82A45F0099049A /* Frameworks */,
 				5C78F0BE2D82A45F0099049A /* Resources */,
+				5C78F1212D85524A0099049A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5C78F11B2D85524A0099049A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5C78F0C22D82A45F0099049A /* swiftui-coredata */,
@@ -163,6 +249,28 @@
 			productReference = 5C78F0DF2D82A4610099049A /* swiftui-coredataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5C78F1052D8552440099049A /* swiftui-coredata-widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C78F11E2D85524A0099049A /* Build configuration list for PBXNativeTarget "swiftui-coredata-widgetExtension" */;
+			buildPhases = (
+				5C78F1022D8552440099049A /* Sources */,
+				5C78F1032D8552440099049A /* Frameworks */,
+				5C78F1042D8552440099049A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5C78F10C2D8552450099049A /* swiftui-coredata-widget */,
+			);
+			name = "swiftui-coredata-widgetExtension";
+			packageProductDependencies = (
+			);
+			productName = "swiftui-coredata-widgetExtension";
+			productReference = 5C78F1062D8552440099049A /* swiftui-coredata-widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +292,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 5C78F0BF2D82A45F0099049A;
 					};
+					5C78F1052D8552440099049A = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 5C78F0BB2D82A45F0099049A /* Build configuration list for PBXProject "swiftui-coredata" */;
@@ -203,6 +314,7 @@
 				5C78F0BF2D82A45F0099049A /* swiftui-coredata */,
 				5C78F0D42D82A4610099049A /* swiftui-coredataTests */,
 				5C78F0DE2D82A4610099049A /* swiftui-coredataUITests */,
+				5C78F1052D8552440099049A /* swiftui-coredata-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +335,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5C78F0DD2D82A4610099049A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C78F1042D8552440099049A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +372,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C78F1022D8552440099049A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +391,11 @@
 			isa = PBXTargetDependency;
 			target = 5C78F0BF2D82A45F0099049A /* swiftui-coredata */;
 			targetProxy = 5C78F0E02D82A4610099049A /* PBXContainerItemProxy */;
+		};
+		5C78F11B2D85524A0099049A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C78F1052D8552440099049A /* swiftui-coredata-widgetExtension */;
+			targetProxy = 5C78F11A2D85524A0099049A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-coredata/swiftui-coredata.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -411,10 +543,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.swiftui.coredata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.app.groups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Apple_Development_wildcard;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Apple_Development_AppGroup_Sample;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-coredata/swiftui-coredata.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -444,10 +577,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.swiftui.coredata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.app.groups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Apple_Development_wildcard;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Apple_Development_AppGroup_Sample;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,6 +659,66 @@
 			};
 			name = Release;
 		};
+		5C78F11F2D85524A0099049A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-coredata-widgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9WYE222SKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swiftui-coredata-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "swiftui-coredata-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.app.groups.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C78F1202D85524A0099049A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "swiftui-coredata-widgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9WYE222SKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "swiftui-coredata-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "swiftui-coredata-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winwinwin.app.groups.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -561,6 +754,15 @@
 			buildConfigurations = (
 				5C78F0F02D82A4610099049A /* Debug */,
 				5C78F0F12D82A4610099049A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C78F11E2D85524A0099049A /* Build configuration list for PBXNativeTarget "swiftui-coredata-widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C78F11F2D85524A0099049A /* Debug */,
+				5C78F1202D85524A0099049A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
