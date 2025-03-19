@@ -54,7 +54,7 @@ struct swiftui_coredata_widgetEntryView : View {
     var body: some View {
         VStack {
             Text("Memo:")
-            ForEach(fetchedMemoList) { memo in
+            ForEach(fetchedMemoList.prefix(2)) { memo in
                 VStack {
                     Text(memo.title ?? "")
                         .font(.title)
